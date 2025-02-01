@@ -14,7 +14,13 @@
             score.wins = 0;
             score.losses = 0;
             score.ties = 0;
-            localStorage.removeItem('theScore')"> Reset</button>
+            localStorage.removeItem('theScore');
+            screenDisplay();
+            "> Reset
+        </button>
+        <p class="totalScores">
+            Wins: 0, Losses: 0, Ties: 0 ;
+        </p>
 
 
     </body>
@@ -65,9 +71,8 @@
             score.losses++;
         }
 
-    alert(`You picked ${myMove}. Computer picked ${compSelect} . ${final}
-
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    alert(`You picked ${myMove}. Computer picked ${compSelect} . ${final}`);
+    screenDisplay()
     
     localStorage.setItem('theScore', JSON.stringify(score));
     
@@ -86,6 +91,10 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
         return compSelect;
         }
        
+    function screenDisplay(){
+        let display = document.querySelector(".totalScores");
+        display.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties} `
+    }
 
     </script>
 </html>
