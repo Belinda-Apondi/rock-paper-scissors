@@ -41,9 +41,9 @@
     </head>
     <body>
         <h1> Rock Paper Scissors </h1>
-        <img src="rock.png" alt="rock image" onclick="playGame('Rock', this)">
-        <img src="paper.png" alt="paper image" onclick="playGame('Paper',this)">
-        <img src="scissors.png" alt="scissors image" onclick="playGame('Scissors',this)">
+        <img src="rock.png" alt="rock image" onclick="playGame('Rock',)">
+        <img src="paper.png" alt="paper image" onclick="playGame('Paper',)">
+        <img src="scissors.png" alt="scissors image" onclick="playGame('Scissors',)">
         <br>
         <br>
         <button onclick="
@@ -65,12 +65,8 @@
             ties: 0,
         };
 
-        function playGame(myMove, element){
-            element.classList.add("enlarge");
-
-            setTimeout(() => {
-                element.classList.remove("enlarge");
-            }, 200);
+        function playGame(myMove){
+           
 
             const compSelect = computerMove()
 
