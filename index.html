@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <title>
             Rock Paper Scissors
         </title>
@@ -40,11 +43,15 @@
             footer{
                 font-size: 20px;
             }
+            h1{
+                margin: 40px 0px 10px 0px;
+            }
             
         </style>
     </head>
     <body>
         <h1> Rock Paper Scissors </h1>
+        <h2 class="header">Challenge Belinda to a duel!😛</h2>
         <img src="rock.png" alt="rock image" onclick="playGame('Rock',)">
         <img src="paper.png" alt="paper image" onclick="playGame('Paper',)">
         <img src="scissors.png" alt="scissors image" onclick="playGame('Scissors',)">
@@ -142,6 +149,12 @@
             display.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
             } 
         
+         new Typewriter("h2", {
+            strings: "Challenge Belinda to a duel!",
+            autoStart: true,
+            cursor: null,
+            delay: 100,
+            });
       
     </script>
 </html>
